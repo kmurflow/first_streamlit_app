@@ -15,8 +15,8 @@ my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.co
 #defines fruit list index as the names of the fruit as opposed to their ID number
 my_fruit_list = my_fruit_list.set_index('Fruit')
 
-#allows user to pick fruit they want to include
-streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
+#allows user to pick fruit they want to include #includes avocados and strawberries by default
+streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index), ['Avocado', 'Strawberries'])
 
 
 #displays table on the page
